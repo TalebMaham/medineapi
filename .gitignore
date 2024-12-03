@@ -1,0 +1,75 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pyo
+*.pyd
+
+# Django
+*.log
+db.sqlite3
+.env
+*.pot
+
+# Django cache and session files
+*.py[cod]
+*.sqlite3
+*.sqlite3-journal
+
+# Static and media files
+/static/
+/media/
+
+# venv
+venv/
+env/
+
+# IDEs and editors
+.idea/
+*.swp
+.vscode/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# pipenv, poetry
+Pipfile
+Pipfile.lock
+
+# PyInstaller
+*.spec
+
+# celery
+celerybeat-schedule
+
+# Testing
+.coverage
+*.cover
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Migrations
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pylint
+.pylint.d/
+
+# pytest
+.cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
