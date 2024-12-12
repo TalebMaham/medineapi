@@ -84,3 +84,21 @@ class FullProductionSerializer(serializers.Serializer):
             }
             for format_name, quantity in cumulative_totals.items()
         ]
+
+
+
+
+
+from .models import Stock
+
+class StockCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Stock
+        fields = ['date', 'film', 'entry', 'machine1', 'machine2', 'daily_total']
+
+class StockDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Stock
+        fields = ['id', 'date', 'film', 'entry', 'machine1', 'machine2', 'daily_total', 'gaspiage', 'stock_initial', 'stock_cumule']
+
+

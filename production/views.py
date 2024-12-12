@@ -61,3 +61,18 @@ class ProductionDeleteByDateViewSet(viewsets.GenericViewSet):
             },
             status=status.HTTP_204_NO_CONTENT
         )
+
+
+
+
+from .models import Stock
+from .serializers import  StockCreateSerializer, StockDetailSerializer
+
+class StockViewSet(viewsets.ModelViewSet):
+    queryset = Stock.objects.all()
+
+    def get_serializer_class(self):
+        if self.action == 'create':
+            return StockCreateSerializer  # Serializer limité pour POST
+        return StockDetailSerializer  # Serializer complet pour GET
+
